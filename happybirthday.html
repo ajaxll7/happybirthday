@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Si t'arrives pas, chiao poto</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #FFEEF0;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h1 {
+            color: #FF69B4;
+        }
+
+        #input-container, #birthday-section, #secret-panel, #letter-panel {
+            margin-top: 20px;
+        }
+
+        input {
+            padding: 10px;
+            border: 2px solid #FF69B4;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 20px;
+            background-color: #FF69B4;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #FF1493;
+        }
+
+        #secret-panel, #letter-panel {
+            margin-top: 30px;
+            background-color: #FFF0F5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            display: none; /* Commence caché */
+        }
+
+        #non-btn {
+            background-color: red;
+            color: white;
+            font-size: 25px;
+            transition: all 0.5s ease;
+        }
+
+        /* Effet de zoom inversé sur le bouton "non" */
+        #non-btn:hover {
+            transform: scale(0.5);
+            position: relative;
+        }
+
+        #non-btn:hover::after {
+            content: "Qu'est ce que tu cherches ici dans ce cas ?";
+            position: absolute;
+            font-size: 14px;
+            color: black;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .letter-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+            border: 2px dashed #FF69B4;
+            padding: 20px;
+            background-color: #FFF8FB;
+        }
+
+        .icons {
+            font-size: 40px;
+            margin: 10px;
+        }
+
+        .final-gif {
+            margin-top: 20px;
+            width: 300px;
+        }
+
+        .top-gif, .bottom-gif {
+            width: 300px;
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="beanie-baby.gif" alt="Singe" class="top-gif">
+        
+        <h1>T'arrives pas je te tue. 🐒</h1>
+        <p>Déjà que tu me mets en silencieux. :)) !</p>
+
+        <div id="choice-section">
+            <h2>Est-ce que je compte pour toi ?</h2>
+            <button onclick="proceedToBirthday()">OUIIII</button>
+            <button id="non-btn">non</button>
+        </div>
+
+        <div id="birthday-section" style="display: none;">
+            <p>Maintenant, mets ma date d'anniv. Ouais le miens poto.</p>
+            <div id="input-container">
+                <input type="text" id="birthday-input" placeholder="Jour/Mois/Année">
+                <input type="text" id="time-input" placeholder="Heure (HH:MM)">
+                <button onclick="checkBirthdayAndTime()">Valider</button>
+            </div>
+        </div>
+
+        <div id="secret-panel">
+            <h2>Félicitations 🎉 !</h2>
+            <div class="letter-container">
+                <span class="icons">🌸🐒💌💖🐒🌸</span>
+                <p>
+                    Tu es trop important pour moi et je te remercie d'être là pour moi 💕. Je veux que tu saches que je tiens énormément à toi, et je suis tellement reconnaissant(e) de partager ces moments avec toi. Ilyes,
+                    Je sais que ça a peut-être paru un peu bizarre tout à l’heure, et je suis sincèrement désolée encore une fois. J’étais en train d’essayer de rendre mon site public, mais ça ne marchait pas, du coup j’ai dû regarder des vidéos et refaire les mêmes étapes mille fois. J’aurais dû te parler, mais le temps pressait, et je voulais absolument t’envoyer ce message avant minuit, avant ton anniversaire.
+                    
+                    Ilyes, je ne sais même pas par où commencer. Je sais que je te l’ai déjà dit plusieurs fois mais jamais je n’aurais imaginé qu’on en arriverait là. Et bien sûr, je ne m’en plains pas du tout ! Plus le temps passe plus je me sens bien et à l’aise avec toi plus j’ai envie de te connaître et d’être avec toi mon petit singe. Je vois que tu me ressembles malgré quelques différences. Je me rends compte que toi (surtout quand on se parle irl) aussi tu es une personne sensible empathique, et pas un robot qui cache ce qu’il ressent et ça, ça me fait vraiment plaisir, merci à Dieu pour ça. Heureusement que t’essaye pas de jouer le sigma non plus t’es trop mignon wsh. Tu montres quand ça ne va pas ou bien quand ça va et tu essaies de me réconforter. Tu ne boudes pas vraiment, tu montres que je compte pour toi. T’as plein de belles qualités que j’apprécie vraiment fort et je suis heureuse que tu sois une bonne personne vraiment. Je regrette pas de t’avoir parlé Ilyes.
+                    
+                    J’apprécie chaque moment quand on parle, quand je t’écoute, quand on fait quelque chose ou même rien du tout. Je suis heureuse de ta compagnie, t’es une bonne personne. S’il te plaît essaie de ne pas te soucier des autres. T’es une personne douce, attentionnée et gentille (bon, pas toujours mais je vais m’en passer c’est ton anniversaire). Tous ceux qui te dérangent avec des remarques négatives sont des idiots. T’es tellement mignon que j’ai juste envie de te serrer dans mes bras comme un enfant. T’es unique dis-toi bien qu’il n’y a pas d’autre Ilyes dans ce monde et que cet Ilyes ne vivra qu’une seule fois. Ne fais pas des choses que tu pourrais regretter avec le temps, ne pense pas trop aux autres. Franchement, tu ne les reverras probablement jamais (même si c'est le cas, s’en fous complètement lol) donc à quoi bon gâcher tes moments pour quelques regards ?
+                    
+                    Ilyes, t’es unique, adorable, et je t’en prie, ne change pas, ne laisse personne te changer. Reste comme tu es continue de te cultiver et de faire des choses qui te sont bénéfiques. Profite bien de ton temps, utilise-le pour ton bien. J’aime être avec toi, je me sens bien et je me sens moi-même avec toi. Je te souhaite que tous tes prochains anniversaires soient encore meilleurs que les précédents et que tu sois toujours en pleine santé et surtout heureux.
+                </p>
+                <p>Je suis vraiment heureuse que tu sois né et que tu sois toujours en vie Ilyes elhamdoulillah 🙏</p>
+                <span class="icons">💖🌸🐒💌🌸🐒</span>
+            </div>
+            <img src="goku.gif" alt="Final Gif" class="final-gif">
+        </div>
+
+        <div id="letter-panel" style="display: none;">
+            <h1>Une lettre pour toi 💌</h1>
+            <div class="letter-container">
+                <span class="icons">🌸🐒💖</span>
+                <p>Tu es trop important pour moi et je te remercie d'être là pour moi 💕. Je veux que tu saches que je tiens énormément à toi, et je suis tellement reconnaissant(e) de partager ces moments avec toi.
+                     Ilyes,
+
+Je sais que ça a peut-être paru un peu bizarre tout à l’heure, et je suis sincèrement désolée encore une fois. J’étais en train d’essayer de rendre mon site public, mais ça ne marchait pas, du coup j’ai dû regarder des vidéos et refaire les mêmes étapes mille fois. J’aurais dû te parler, mais le temps pressait, et je voulais absolument t’envoyer ce message avant minuit, avant ton anniversaire.
+
+Ilyes, je ne sais même pas par où commencer. Je sais que je te l’ai déjà dit plusieurs fois mais jamais je n’aurais imaginé qu’on en arriverait là. Et bien sûr, je ne m’en plains pas du tout ! Plus le temps passe plus je me sens bien et à l’aise avec toi plus j’ai envie de te connaître et d’être avec toi mon petit singe. Je vois que tu me ressembles malgré quelques différences .Je me rends compte que toi (surtout quand on se parle irl) aussi tu es une personne sensible empathique, et pas un robot qui cache ce qu’il ressent et ça, ça me fait vraiment plaisir, merci à Dieu pour ça. Heureusement que t’essaye pas de jouer le sigma non plus t’es trop mignon wsh. Tu montres quand ça ne va pas ou bien quand ça va et tu essaies de me réconforter. Tu ne boudes pas vraiment, tu montres que je compte pour toi. T’as plein de belles qualités que j’apprécie vraiment  fort et je suis heureuse que tu sois une bonne personne vraiment. Je regrette pas de t’avoir parlé Ilyes.
+
+J’apprécie chaque moment quand on parle, quand je t’écoute, quand on fait quelque chose ou même rien du tout. Je suis heureuse de ta compagnie, t’es une bonne personne. S’il te plaît essaie de ne pas te soucier des autres. T’es une personne douce, attentionnée et gentille (bon, pas toujours mais je vais m’en passer c’est ton anniversaire). Tous ceux qui te dérangent avec des remarques négatives sont des idiots. T’es tellement mignon que j’ai juste envie de te serrer dans mes bras comme un enfant. T’es unique dis-toi bien qu’il n’y a pas d’autre Ilyes dans ce monde et que cet Ilyes ne vivra qu’une seule fois. Ne fais pas des choses que tu pourrais regretter avec le temps ne pense pas trop aux autres. Franchement, tu ne les reverras probablement jamais( même si ct le ça son s’en fou complètement lol) donc à quoi bon gâcher tes moments pour quelques regards ?
+
+Ilyes, t’es unique, adorable, et je t’en prie, ne change pas ne laisse personne te changer. Reste comme tu es continue de te cultiver et de faire des choses qui te sont bénéfiques. Profite bien de ton temps, utilise-le pour ton bien. J’aime être avec toi, je me sens bien et je me sens moi même avec toi. Je te souhaite que tous tes prochains anniversaires soient encore meilleurs que les précédents et que tu sois toujours en pleine santé et surtout heureux.
+ Je suis vraiment heureuse que tu sois né et que tu sois toujours en vie Ilyes elhamdoulillah 🙏
+                </p>
+                <span class="icons">💖🐒🌸</span>
+            </div>
+            <img src="yoimi.jpg" alt="Final Gif" class="final-gif">
+            <img src="singe.gif" alt="Final Gif" class="final-gif">
+        </div>
+
+        <img src="goku.gif" alt="Singe danseur" class="bottom-gif">
+    </div>
+
+    <script>
+        function proceedToBirthday() {
+            document.getElementById("choice-section").style.display = "none";
+            document.getElementById("birthday-section").style.display = "block";
+        }
+
+        function checkBirthdayAndTime() {
+            const birthdayInput = document.getElementById("birthday-input").value;
+            const timeInput
+ = document.getElementById("time-input").value;
+            const correctDate = "14/05/2005";
+            const correctTime = "00:30";
+
+            if (birthdayInput === correctDate && timeInput === correctTime) {
+                // Affiche la lettre
+                document.getElementById("secret-panel").style.display = "none";
+                document.getElementById("letter-panel").style.display = "block";
+            } else {
+                alert("MMMMDRR TSAIS QUE JE VAIS T'ECLATER. :)))))");
+            }
+        }
+    </script>
+</body>
+</html>
